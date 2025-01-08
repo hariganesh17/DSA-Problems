@@ -21,7 +21,7 @@ public class Armstrong {
         return false;
     }
     public static void main(String[] args){
-        int num =103;
+        int num =371;
         System.out.println(checkArmstrong(num));
     }
 }

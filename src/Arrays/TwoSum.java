@@ -3,7 +3,6 @@ package Arrays;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class TwoSum {
     //brute force - nested loop
@@ -38,24 +37,28 @@ public class TwoSum {
         }
         return answer;
     }
-    //without Map -- 2 pointer
-    public static String twoSum3(int[] array,int tarrget){
+    //without Map -- 2 pointer - use only if the array is sorted else sort it first
+    public static int[] twoSum3(int[] array,int target){
         Arrays.sort(array);
+        int[] result = new int[2];
+        result[0] = result[1] = -1;
         int left = 0;
         int right = array.length-1;
         while (left < right){
             int sum = array[left] + array[right];
-            if(sum == tarrget){
-                return "YES";
-            }else if(sum < tarrget) left ++;
+            if(sum == target){
+               result[0] = left;
+               result[1] = right;
+               break;
+            }else if(sum < target) left ++;
                 else right --;
         }
-        return "NO";
+        return result;
     }
     public static void main(String[] args){
-        int[] array = {2,7,11,15};
+        int[] nums = {2,7,11,15};
         int tarrget = 9;
-       String result = twoSum3(array,tarrget);
-        System.out.println(result);
+        int[] result = twoSum3(nums,tarrget);
+        System.out.println(Arrays.toString(result));
     }
 }

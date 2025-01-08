@@ -14,7 +14,7 @@ public class CheckArrayIsSorted {
 	
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5};
-		int n = CheckArrayIsSorted.check(arr);
-		System.out.println(n);
+		int result = CheckArrayIsSorted.check(arr);
+		System.out.println(result);
 	}
 }

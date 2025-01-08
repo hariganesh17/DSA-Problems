@@ -234,6 +234,21 @@ public class Practise {
 //    A B
 //    A
 
+    public static void print16(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i-1;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=2*n-2*i+1;j++){
+                System.out.print("*");
+            }
+            for(int j=1;j<=i-1;j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void print15(int n){
         for(int i=1;i<=n;i++){
             for(char ch='A';ch<='A'+(n-i);ch++){
@@ -244,6 +259,6 @@ public class Practise {
     }
     public static void main(String[] args){
         int n = 5;
-        print15(n);
+        print16(n);
     }
 }

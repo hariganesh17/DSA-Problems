@@ -22,11 +22,11 @@ public class MissingNumber {
     //optimized -1
 
     public static int numbers(int[] arr){
-        int n = arr.length;
+        int n = arr.length + 1;
         int sum1 =  n * (n+1) / 2;
         int sum2 = 0;
 
-        for(int i=0; i<n-1; i++){
+        for(int i=0; i<arr.length; i++){
             sum2 += arr[i];
         }
         return (sum1-sum2);
@@ -50,8 +50,8 @@ public class MissingNumber {
         return 0;
     }
     public static void main(String[] args) {
-        int[] arr = {1,2,4,3,5};
-        int missing = number(arr);
+        int[] arr = {1,2,3,5};
+        int missing = numbers(arr);
         System.out.println(missing); // Expected output: 2
     }
 }

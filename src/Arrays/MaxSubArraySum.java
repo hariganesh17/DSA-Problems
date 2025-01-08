@@ -1,14 +1,14 @@
 package Arrays;
 
-public class MaxSubArray {
+public class MaxSubArraySum {
     //Brute force -time O(N^3) space- O(1)
     public static int max(int[] arr){
-        int n = arr.length;       //  {2,3,1,4,6,4,2}
+        int n = arr.length;
         int max = Integer.MIN_VALUE;
         for(int i=0;i<n;i++){
             for(int j=i;j<n;j++){
                 int sum = 0;
-                for(int k=i;k<=j;k++){
+                for(int k=i;k<=j;k++){      //sub array - from i to j
                     sum += arr[k];
                 }
                     if(sum > max){
@@ -39,32 +39,14 @@ public class MaxSubArray {
         int max = Integer.MIN_VALUE;
         int sum = 0;
 
-        int start = 0;
-        int ansStart = -1;
-        int ansEnd = -1;
-
         for(int i=0;i<n;i++){
-            if(sum ==0) start =i;
             sum += arr[i];
             if(sum > max){
                 max = sum;
-                ansStart = start;
-                ansEnd = i;
             }
             if(sum < 0){
                 sum = 0;
             }
-        }
-
-        System.out.print("The subarray is: [");
-        for (int i = ansStart; i <= ansEnd; i++) {
-            System.out.print(arr[i] + " ");
-        }
-        System.out.println("]");
-
-        //to include sum of empty subarray
-        if(max < 0){
-            max =0;
         }
         return max;
     }
