@@ -38,6 +38,7 @@ public class TwoSum {
         return answer;
     }
     //without Map -- 2 pointer - use only if the array is sorted else sort it first
+    //time - O(N log N) + O(N) = O(N) ; space - O(1)
     public static int[] twoSum3(int[] array,int target){
         Arrays.sort(array);
         int[] result = new int[2];
@@ -58,7 +59,7 @@ public class TwoSum {
     public static void main(String[] args){
         int[] nums = {2,7,11,15};
         int tarrget = 9;
-        int[] result = twoSum3(nums,tarrget);
+        int[] result = twoSum2(nums,tarrget);
         System.out.println(Arrays.toString(result));
     }
 }

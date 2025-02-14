@@ -78,6 +78,7 @@ public class MajorityElementTwo {
         return result;
     }
     public static void main(String[] args){
+
         int[] arr = {1,1,1,1,1,3,3,3,3,3,5};
         List<Integer> result = majority2(arr);
         System.out.println(result);

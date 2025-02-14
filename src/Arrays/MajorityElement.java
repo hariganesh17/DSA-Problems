@@ -59,7 +59,7 @@ public class MajorityElement {
 
     public static void main(String[] args){
         int[] arr = {1,2,2,3,2,2};
-       int num = majority(arr);
+       int num = num(arr);
         System.out.println(num);
     }
 }

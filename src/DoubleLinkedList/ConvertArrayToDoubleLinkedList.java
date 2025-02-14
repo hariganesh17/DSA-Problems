@@ -1,6 +1,6 @@
 package DoubleLinkedList;
 
-public class ConvertArrayToDoubleLL {
+public class ConvertArrayToDoubleLinkedList {
     public static Node convert(int[] arr){
         Node head = new Node(arr[0]);
         Node prev = head;

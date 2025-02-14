@@ -48,7 +48,7 @@ public class BasicOperations {
 
     //6.Remove tail
     static Node removeTail(Node head){
-       if(head == null || head.next == null) return null;
+       if(head == null || head.next == null) return null; // either LL is empty or it has only one element
        Node temp = head;
        while(temp.next.next != null){
            temp = temp.next;
@@ -74,7 +74,7 @@ public class BasicOperations {
         temp.next = new Node(value);
         return head;
     }
-    static void print(Node head){
+    public static void print(Node head){
        while(head != null){
            System.out.print(head.data + " ");
            head = head.next;
