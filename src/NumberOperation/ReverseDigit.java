@@ -16,3 +16,4 @@ public class ReverseDigit {
         System.out.println(reverse(n));
     }
 }
+

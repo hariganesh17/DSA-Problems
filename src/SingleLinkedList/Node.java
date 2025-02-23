@@ -1,7 +1,6 @@
 package SingleLinkedList;
 
 public class Node {
-    public Node back;
     int data;
     Node next;
 

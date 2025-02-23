@@ -7,10 +7,10 @@ public class SelectionSort{
 	public static int[] select(int[] arr) {
 		int n = arr.length;
 
-		for(int i=0;i<n-1;i++) {
+		for(int i=0;i<=n-2;i++) {
 			int minIndex = i;
 
-			for(int j=i+1; j<n; j++) {
+			for(int j=i+1; j<=n-1; j++) {
 				if(arr[j] < arr[minIndex]) {
 					minIndex = j;
 				}

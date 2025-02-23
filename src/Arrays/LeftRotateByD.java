@@ -58,7 +58,7 @@ public class LeftRotateByD {
     }
     public static void main(String[] args){
         int[] arr = {1,2,3,4,5};
-        int[] result = rotate1(arr,2);
+        int[] result = rotate1(arr,1);
         System.out.println(Arrays.toString(result));
     }
 }

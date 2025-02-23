@@ -30,11 +30,13 @@ public class RemoveKthNodeFromEnd {
     //Optimized -  time: O(lenght of LL) ; space-O(1)
     public static Node remove2(Node head,int k){
         Node fast = head;
-        Node slow = head;
 
         for(int i=0;i<k;i++){
             fast = fast.next;
         }
+
+        Node slow = head;
+
         if(fast == null) return head.next;
 
         while(fast.next != null){
@@ -49,7 +51,7 @@ public class RemoveKthNodeFromEnd {
     public static void main(String[] args){
         int[] arr = {1,2,3,4,5};
         Node head =  BasicOperations.convertArrayToLL(arr);
-        Node result = remove2(head,1);
+        Node result = remove2(head,2);
         BasicOperations.print(result);
     }
 }

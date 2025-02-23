@@ -34,25 +34,38 @@ public class MaxSubArraySum {
         return max;
     }
     // optimized - time O(N), space O(1) : kadane's algorithm
-    public static int maximum(int[] arr){
+    public static void maximum(int[] arr){
         int n = arr.length;
         int max = Integer.MIN_VALUE;
         int sum = 0;
+
+        //print sub array
+        int start = 0;
+        int tempStart = 0;
+        int end = 0;
 
         for(int i=0;i<n;i++){
             sum += arr[i];
             if(sum > max){
                 max = sum;
+                //print
+                start = tempStart;
+                end = i;
             }
             if(sum < 0){
                 sum = 0;
+                tempStart = i+1;
             }
         }
-        return max;
+        System.out.println("Max Sum: "+max);
+        System.out.println("Sub array");
+
+        for(int i=start;i<=end;i++){
+            System.out.print(arr[i]+" ");
+        }
     }
     public static void main(String[] args){
         int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
-       int output =  maximum(arr);
-        System.out.println("Max num: "+ output);
+        maximum(arr);
     }
 }
