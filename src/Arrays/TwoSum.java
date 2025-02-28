@@ -57,7 +57,7 @@ public class TwoSum {
         return result;
     }
     public static void main(String[] args){
-        int[] nums = {2,7,11,15};
+        int[] nums = {7,11,15,2};
         int tarrget = 9;
         int[] result = twoSum2(nums,tarrget);
         System.out.println(Arrays.toString(result));
