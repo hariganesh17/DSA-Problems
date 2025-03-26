@@ -11,17 +11,14 @@ public class MaxConsecutiveOnesIII {
             if(arr[right] == 0){
                 zeros++;
             }
-            if(zeros > k){
+            while(zeros > k){
                 if(arr[left] == 0){
                     zeros--;
                 }
                 left++;
             }
-            if(zeros <= k){
-                int length = right - left + 1;
-                maxLength = Math.max(maxLength,length);
-            }
-            right ++;
+            maxLength = Math.max(maxLength,right-left+1);
+            right++;
         }
         return maxLength;
     }
