@@ -1,11 +1,10 @@
 package Arrays;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class RemoveDuplicates {
+public class RemoveDuplicatesI {
 	//Brute force - use set(only unique) - time: O(N) + O(N) : space - O(N)
 
 	public static int[] remove(int[] arr){
@@ -33,10 +32,23 @@ public class RemoveDuplicates {
 		 }
 		return Arrays.copyOf(arr,i+1);
 	 }
+	 //same optimized
+	public static int remove1(int[] nums){
+		int k = 1;
+		for(int i=1;i<nums.length;i++){
+			if(nums[i] != nums[k-1]){
+				nums[k] = nums[i];
+				k++;
+			}
+		}
+		//System.out.println(Arrays.toString(Arrays.copyOf(nums,k)));
+		return k;
+	}
 	 
 	 public static void main(String[] args) {
-		 int[] arr = {1,1,1,2,2,3,3,3,4,5,5};
-		 int[] n = removeDuplicates(arr);
-		 System.out.println(Arrays.toString(n));
+		 int[] nums = {1,1,1,2,2,3,3,3,4,5,5};
+		 //int[] n = removeDuplicates(arr);
+		// System.out.println(Arrays.toString(n));
+		 System.out.println(remove1(nums));
 		 }
 }
