@@ -7,6 +7,7 @@ public class kthSmallest {
         inOrder(root,k);
         return result;
     }
+    //in order is always sorted in BST
     public  void inOrder(Node node,int k){
         if(node == null) return;
 
