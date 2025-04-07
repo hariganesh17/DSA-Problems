@@ -12,17 +12,20 @@ public class ZigZagConversion {
         }
 
         int currentRow = 0;             // track current row index
-        boolean goingDown = false;
+        int direction = 1;              // 1-moving down ; -1 - moving up
 
         for(char c : s.toCharArray()){
             rows[currentRow].append(c);
 
-            // Change direction if we hit top or bottom
-            if(currentRow == 0 || currentRow == numsRows-1){
-                goingDown = !goingDown;     // reverse the direction
+            // Change direction if we hit top
+            if(currentRow == 0) {
+                direction = 1;          // go down
             }
-            // Move to next row based on direction
-            currentRow += goingDown ? 1 : -1;
+            // Change direction if we hit bottom
+            else if(currentRow == numsRows-1) {
+                direction = -1;         // go up
+            }
+            currentRow += direction;
         }
         //Combine all rows into one result
         StringBuilder result = new StringBuilder();
