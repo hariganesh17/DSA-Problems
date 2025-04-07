@@ -3,6 +3,7 @@ package Arrays;
 import java.util.Arrays;
 
 public class MergeSortedArrays {
+    // ‘ARR1’ has a size equal to ‘M’ + ‘N’ such that ‘ARR1’ has enough space to add all the elements of ‘ARR2’ in ‘ARR1’
     public static void merge(int[] nums1,int m, int[] nums2,int n){
         int length = nums1.length;
         int end = length-1;
