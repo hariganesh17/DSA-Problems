@@ -21,7 +21,7 @@ public class SquareRoot {
         return right;
     }
     public static void main(String[] args){
-        int n = 3;
+
         System.out.println(find(16));
     }
 }
