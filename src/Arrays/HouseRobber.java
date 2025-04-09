@@ -4,6 +4,20 @@ package Arrays;
 public class  HouseRobber {
     //Intution - if u decided to pick one(3),  u cant pick prev2(2), u can pick only prev1(1)  .. vice versa  //[1,2,3]
 
+    //Brute force - Recursion
+    public static int rob1(int[] nums){
+        return houseRob(nums,nums.length-1);
+    }
+    private static int houseRob(int[] nums, int i){
+        if(i<0) return 0;
+        int pick = nums[i] + houseRob(nums,i-2);
+        int notPick = 0 + houseRob(nums,i-1);
+
+        return Math.max(pick,notPick);
+    }
+
+    //Better
+
     /*dp[n];
     dp[0] = a[0];
     int negative = 0;
@@ -12,8 +26,8 @@ public class  HouseRobber {
         notTake = 0+ dp[i-1];
         dp[i] = max(take,not take);
     }*/
-
-
+    
+    //optimized
     public static int rob(int[] nums){
         int n = nums.length;
         int prev1 = nums[0]; //
@@ -33,6 +47,6 @@ public class  HouseRobber {
     }
     public static void main(String[] args){
         int[] nums = {1,2,3,1};
-        System.out.println(nums);
+        System.out.println(rob1(nums));
     }
 }
