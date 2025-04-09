@@ -1,7 +1,7 @@
 package Arrays;
 
 //maximum Sum of  non adjacent elemets
-public class HouseRobber {
+public class  HouseRobber {
     //Intution - if u decided to pick one(3),  u cant pick prev2(2), u can pick only prev1(1)  .. vice versa  //[1,2,3]
 
     /*dp[n];

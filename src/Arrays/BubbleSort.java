@@ -1,7 +1,7 @@
 package Arrays;
 import java.util.Arrays;
 
-public class BubbleSort {
+public class  BubbleSort {
 	//pushes the max to last by comparing adjacent elements
 	public static void bubbleSorting(int[] arr) {
 		int n =arr.length;
