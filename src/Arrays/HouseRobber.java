@@ -26,7 +26,6 @@ public class  HouseRobber {
         notTake = 0+ dp[i-1];
         dp[i] = max(take,not take);
     }*/
-    
     //optimized
     public static int rob(int[] nums){
         int n = nums.length;
