@@ -64,8 +64,19 @@ public class MaxSubArraySum {
             System.out.print(arr[i]+" ");
         }
     }
+    //Optimized - same kadane's algo which also handles all -ve array (above doesn't handle)
+    public static int maxSum(int[] arr){
+        int max = arr[0];
+        int sum = arr[0];
+
+        for(int i=1;i<arr.length;i++){
+            sum = Math.max(arr[i],sum+arr[i]);
+            max = Math.max(max,sum);
+        }
+        return max;
+    }
     public static void main(String[] args){
         int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
-        maximum(arr);
+        System.out.println(maxSum(arr));
     }
 }
